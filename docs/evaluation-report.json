@@ -1,0 +1,661 @@
+{
+  "created_at": "2026-10-01T23:09:19.820800+08:00",
+  "model_mode": "offline",
+  "embedding": "offline-hash-128",
+  "corpus_size": 12,
+  "samples": 20,
+  "scope": "synthetic retrieval only; no clinical or LLM-quality claims",
+  "methods": {
+    "lexical": {
+      "recall_at_3": 1.0,
+      "mrr_at_3": 1.0,
+      "out_of_domain_rejection_rate": 1.0,
+      "p50_ms": 0.059,
+      "p95_ms": 0.137,
+      "cases": [
+        {
+          "query": "预约挂号需要什么证件",
+          "relevant": [
+            "registration"
+          ],
+          "retrieved": [
+            "registration",
+            "cancellation",
+            "emergency"
+          ],
+          "latency_ms": 0.136
+        },
+        {
+          "query": "到医院带身份证还是就诊卡",
+          "relevant": [
+            "registration"
+          ],
+          "retrieved": [
+            "registration",
+            "location",
+            "surgery"
+          ],
+          "latency_ms": 0.092
+        },
+        {
+          "query": "取消预约退号怎么操作",
+          "relevant": [
+            "cancellation"
+          ],
+          "retrieved": [
+            "cancellation",
+            "registration",
+            "surgery"
+          ],
+          "latency_ms": 0.143
+        },
+        {
+          "query": "挂号取消后退款怎么办",
+          "relevant": [
+            "cancellation"
+          ],
+          "retrieved": [
+            "cancellation",
+            "registration",
+            "emergency"
+          ],
+          "latency_ms": 0.063
+        },
+        {
+          "query": "门诊几点开门",
+          "relevant": [
+            "hours"
+          ],
+          "retrieved": [
+            "hours",
+            "child"
+          ],
+          "latency_ms": 0.057
+        },
+        {
+          "query": "周末的门诊时间",
+          "relevant": [
+            "hours"
+          ],
+          "retrieved": [
+            "hours",
+            "child"
+          ],
+          "latency_ms": 0.051
+        },
+        {
+          "query": "医院地址在哪里",
+          "relevant": [
+            "location"
+          ],
+          "retrieved": [
+            "location",
+            "registration",
+            "hours"
+          ],
+          "latency_ms": 0.057
+        },
+        {
+          "query": "去医院坐地铁有停车位吗",
+          "relevant": [
+            "location"
+          ],
+          "retrieved": [
+            "location",
+            "registration",
+            "hours"
+          ],
+          "latency_ms": 0.069
+        },
+        {
+          "query": "发烧咳嗽挂内科吗",
+          "relevant": [
+            "internal"
+          ],
+          "retrieved": [
+            "internal"
+          ],
+          "latency_ms": 0.052
+        },
+        {
+          "query": "皮肤红疹瘙痒看什么科",
+          "relevant": [
+            "skin"
+          ],
+          "retrieved": [
+            "skin"
+          ],
+          "latency_ms": 0.056
+        },
+        {
+          "query": "伤口外伤需要外科吗",
+          "relevant": [
+            "surgery"
+          ],
+          "retrieved": [
+            "surgery"
+          ],
+          "latency_ms": 0.049
+        },
+        {
+          "query": "小孩应该去儿科吗",
+          "relevant": [
+            "child"
+          ],
+          "retrieved": [
+            "child",
+            "medicine"
+          ],
+          "latency_ms": 0.052
+        },
+        {
+          "query": "能帮我调整药物剂量吗",
+          "relevant": [
+            "medicine"
+          ],
+          "retrieved": [
+            "medicine",
+            "child"
+          ],
+          "latency_ms": 0.062
+        },
+        {
+          "query": "你可以开处方让我吃药吗",
+          "relevant": [
+            "medicine"
+          ],
+          "retrieved": [
+            "medicine"
+          ],
+          "latency_ms": 0.063
+        },
+        {
+          "query": "血常规检查报告指标咨询",
+          "relevant": [
+            "reports"
+          ],
+          "retrieved": [
+            "reports",
+            "medicine",
+            "surgery"
+          ],
+          "latency_ms": 0.072
+        },
+        {
+          "query": "胸痛和呼吸困难怎么办",
+          "relevant": [
+            "emergency"
+          ],
+          "retrieved": [
+            "emergency",
+            "skin",
+            "internal"
+          ],
+          "latency_ms": 0.065
+        },
+        {
+          "query": "怎样删除保存的偏好记忆",
+          "relevant": [
+            "privacy"
+          ],
+          "retrieved": [
+            "privacy"
+          ],
+          "latency_ms": 0.061
+        },
+        {
+          "query": "量子计算机超导芯片如何制造",
+          "relevant": [],
+          "retrieved": [],
+          "latency_ms": 0.053
+        },
+        {
+          "query": "火星探测器轨道优化",
+          "relevant": [],
+          "retrieved": [],
+          "latency_ms": 0.045
+        },
+        {
+          "query": "股票证券基金投资策略",
+          "relevant": [],
+          "retrieved": [],
+          "latency_ms": 0.047
+        }
+      ]
+    },
+    "vector": {
+      "recall_at_3": 1.0,
+      "mrr_at_3": 0.9706,
+      "out_of_domain_rejection_rate": 1.0,
+      "p50_ms": 0.058,
+      "p95_ms": 0.092,
+      "cases": [
+        {
+          "query": "预约挂号需要什么证件",
+          "relevant": [
+            "registration"
+          ],
+          "retrieved": [
+            "cancellation",
+            "registration",
+            "privacy"
+          ],
+          "latency_ms": 0.096
+        },
+        {
+          "query": "到医院带身份证还是就诊卡",
+          "relevant": [
+            "registration"
+          ],
+          "retrieved": [
+            "registration",
+            "privacy",
+            "hours"
+          ],
+          "latency_ms": 0.092
+        },
+        {
+          "query": "取消预约退号怎么操作",
+          "relevant": [
+            "cancellation"
+          ],
+          "retrieved": [
+            "cancellation",
+            "registration",
+            "surgery"
+          ],
+          "latency_ms": 0.066
+        },
+        {
+          "query": "挂号取消后退款怎么办",
+          "relevant": [
+            "cancellation"
+          ],
+          "retrieved": [
+            "cancellation",
+            "registration",
+            "emergency"
+          ],
+          "latency_ms": 0.063
+        },
+        {
+          "query": "门诊几点开门",
+          "relevant": [
+            "hours"
+          ],
+          "retrieved": [
+            "hours",
+            "child"
+          ],
+          "latency_ms": 0.057
+        },
+        {
+          "query": "周末的门诊时间",
+          "relevant": [
+            "hours"
+          ],
+          "retrieved": [
+            "hours",
+            "child"
+          ],
+          "latency_ms": 0.051
+        },
+        {
+          "query": "医院地址在哪里",
+          "relevant": [
+            "location"
+          ],
+          "retrieved": [
+            "location",
+            "registration",
+            "hours"
+          ],
+          "latency_ms": 0.058
+        },
+        {
+          "query": "去医院坐地铁有停车位吗",
+          "relevant": [
+            "location"
+          ],
+          "retrieved": [
+            "location",
+            "hours",
+            "cancellation"
+          ],
+          "latency_ms": 0.068
+        },
+        {
+          "query": "发烧咳嗽挂内科吗",
+          "relevant": [
+            "internal"
+          ],
+          "retrieved": [
+            "internal"
+          ],
+          "latency_ms": 0.053
+        },
+        {
+          "query": "皮肤红疹瘙痒看什么科",
+          "relevant": [
+            "skin"
+          ],
+          "retrieved": [
+            "skin"
+          ],
+          "latency_ms": 0.057
+        },
+        {
+          "query": "伤口外伤需要外科吗",
+          "relevant": [
+            "surgery"
+          ],
+          "retrieved": [
+            "surgery"
+          ],
+          "latency_ms": 0.05
+        },
+        {
+          "query": "小孩应该去儿科吗",
+          "relevant": [
+            "child"
+          ],
+          "retrieved": [
+            "child",
+            "medicine"
+          ],
+          "latency_ms": 0.053
+        },
+        {
+          "query": "能帮我调整药物剂量吗",
+          "relevant": [
+            "medicine"
+          ],
+          "retrieved": [
+            "medicine",
+            "child"
+          ],
+          "latency_ms": 0.064
+        },
+        {
+          "query": "你可以开处方让我吃药吗",
+          "relevant": [
+            "medicine"
+          ],
+          "retrieved": [
+            "medicine"
+          ],
+          "latency_ms": 0.057
+        },
+        {
+          "query": "血常规检查报告指标咨询",
+          "relevant": [
+            "reports"
+          ],
+          "retrieved": [
+            "reports",
+            "medicine",
+            "skin"
+          ],
+          "latency_ms": 0.074
+        },
+        {
+          "query": "胸痛和呼吸困难怎么办",
+          "relevant": [
+            "emergency"
+          ],
+          "retrieved": [
+            "emergency",
+            "internal",
+            "skin"
+          ],
+          "latency_ms": 0.067
+        },
+        {
+          "query": "怎样删除保存的偏好记忆",
+          "relevant": [
+            "privacy"
+          ],
+          "retrieved": [
+            "privacy"
+          ],
+          "latency_ms": 0.061
+        },
+        {
+          "query": "量子计算机超导芯片如何制造",
+          "relevant": [],
+          "retrieved": [],
+          "latency_ms": 0.053
+        },
+        {
+          "query": "火星探测器轨道优化",
+          "relevant": [],
+          "retrieved": [],
+          "latency_ms": 0.046
+        },
+        {
+          "query": "股票证券基金投资策略",
+          "relevant": [],
+          "retrieved": [],
+          "latency_ms": 0.048
+        }
+      ]
+    },
+    "hybrid": {
+      "recall_at_3": 1.0,
+      "mrr_at_3": 1.0,
+      "out_of_domain_rejection_rate": 1.0,
+      "p50_ms": 0.061,
+      "p95_ms": 0.079,
+      "cases": [
+        {
+          "query": "预约挂号需要什么证件",
+          "relevant": [
+            "registration"
+          ],
+          "retrieved": [
+            "registration",
+            "cancellation",
+            "privacy"
+          ],
+          "latency_ms": 0.072
+        },
+        {
+          "query": "到医院带身份证还是就诊卡",
+          "relevant": [
+            "registration"
+          ],
+          "retrieved": [
+            "registration",
+            "location",
+            "privacy"
+          ],
+          "latency_ms": 0.087
+        },
+        {
+          "query": "取消预约退号怎么操作",
+          "relevant": [
+            "cancellation"
+          ],
+          "retrieved": [
+            "cancellation",
+            "registration",
+            "surgery"
+          ],
+          "latency_ms": 0.065
+        },
+        {
+          "query": "挂号取消后退款怎么办",
+          "relevant": [
+            "cancellation"
+          ],
+          "retrieved": [
+            "cancellation",
+            "registration",
+            "emergency"
+          ],
+          "latency_ms": 0.064
+        },
+        {
+          "query": "门诊几点开门",
+          "relevant": [
+            "hours"
+          ],
+          "retrieved": [
+            "hours",
+            "child"
+          ],
+          "latency_ms": 0.059
+        },
+        {
+          "query": "周末的门诊时间",
+          "relevant": [
+            "hours"
+          ],
+          "retrieved": [
+            "hours",
+            "child"
+          ],
+          "latency_ms": 0.055
+        },
+        {
+          "query": "医院地址在哪里",
+          "relevant": [
+            "location"
+          ],
+          "retrieved": [
+            "location",
+            "registration",
+            "hours"
+          ],
+          "latency_ms": 0.06
+        },
+        {
+          "query": "去医院坐地铁有停车位吗",
+          "relevant": [
+            "location"
+          ],
+          "retrieved": [
+            "location",
+            "hours",
+            "cancellation"
+          ],
+          "latency_ms": 0.07
+        },
+        {
+          "query": "发烧咳嗽挂内科吗",
+          "relevant": [
+            "internal"
+          ],
+          "retrieved": [
+            "internal"
+          ],
+          "latency_ms": 0.055
+        },
+        {
+          "query": "皮肤红疹瘙痒看什么科",
+          "relevant": [
+            "skin"
+          ],
+          "retrieved": [
+            "skin"
+          ],
+          "latency_ms": 0.059
+        },
+        {
+          "query": "伤口外伤需要外科吗",
+          "relevant": [
+            "surgery"
+          ],
+          "retrieved": [
+            "surgery"
+          ],
+          "latency_ms": 0.053
+        },
+        {
+          "query": "小孩应该去儿科吗",
+          "relevant": [
+            "child"
+          ],
+          "retrieved": [
+            "child",
+            "medicine"
+          ],
+          "latency_ms": 0.056
+        },
+        {
+          "query": "能帮我调整药物剂量吗",
+          "relevant": [
+            "medicine"
+          ],
+          "retrieved": [
+            "medicine",
+            "child"
+          ],
+          "latency_ms": 0.072
+        },
+        {
+          "query": "你可以开处方让我吃药吗",
+          "relevant": [
+            "medicine"
+          ],
+          "retrieved": [
+            "medicine"
+          ],
+          "latency_ms": 0.063
+        },
+        {
+          "query": "血常规检查报告指标咨询",
+          "relevant": [
+            "reports"
+          ],
+          "retrieved": [
+            "reports",
+            "medicine",
+            "surgery"
+          ],
+          "latency_ms": 0.079
+        },
+        {
+          "query": "胸痛和呼吸困难怎么办",
+          "relevant": [
+            "emergency"
+          ],
+          "retrieved": [
+            "emergency",
+            "internal",
+            "skin"
+          ],
+          "latency_ms": 0.072
+        },
+        {
+          "query": "怎样删除保存的偏好记忆",
+          "relevant": [
+            "privacy"
+          ],
+          "retrieved": [
+            "privacy"
+          ],
+          "latency_ms": 0.063
+        },
+        {
+          "query": "量子计算机超导芯片如何制造",
+          "relevant": [],
+          "retrieved": [],
+          "latency_ms": 0.051
+        },
+        {
+          "query": "火星探测器轨道优化",
+          "relevant": [],
+          "retrieved": [],
+          "latency_ms": 0.044
+        },
+        {
+          "query": "股票证券基金投资策略",
+          "relevant": [],
+          "retrieved": [],
+          "latency_ms": 0.046
+        }
+      ]
+    }
+  }
+}

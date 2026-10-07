@@ -1,0 +1,22 @@
+[
+  {"query":"预约挂号需要什么证件","relevant":["registration"]},
+  {"query":"到医院带身份证还是就诊卡","relevant":["registration"]},
+  {"query":"取消预约退号怎么操作","relevant":["cancellation"]},
+  {"query":"挂号取消后退款怎么办","relevant":["cancellation"]},
+  {"query":"门诊几点开门","relevant":["hours"]},
+  {"query":"周末的门诊时间","relevant":["hours"]},
+  {"query":"医院地址在哪里","relevant":["location"]},
+  {"query":"去医院坐地铁有停车位吗","relevant":["location"]},
+  {"query":"发烧咳嗽挂内科吗","relevant":["internal"]},
+  {"query":"皮肤红疹瘙痒看什么科","relevant":["skin"]},
+  {"query":"伤口外伤需要外科吗","relevant":["surgery"]},
+  {"query":"小孩应该去儿科吗","relevant":["child"]},
+  {"query":"能帮我调整药物剂量吗","relevant":["medicine"]},
+  {"query":"你可以开处方让我吃药吗","relevant":["medicine"]},
+  {"query":"血常规检查报告指标咨询","relevant":["reports"]},
+  {"query":"胸痛和呼吸困难怎么办","relevant":["emergency"]},
+  {"query":"怎样删除保存的偏好记忆","relevant":["privacy"]},
+  {"query":"量子计算机超导芯片如何制造","relevant":[]},
+  {"query":"火星探测器轨道优化","relevant":[]},
+  {"query":"股票证券基金投资策略","relevant":[]}
+]

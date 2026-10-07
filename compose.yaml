@@ -1,0 +1,35 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: medical
+      POSTGRES_PASSWORD: medical_demo
+      POSTGRES_DB: medical
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U medical -d medical"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DATABASE_URL: postgresql://medical:medical_demo@db:5432/medical
+      MODEL_MODE: ${MODEL_MODE:-offline}
+      DEMO_AUTH: "true"
+      AUTH_SECRET: ${AUTH_SECRET:-local-demo-auth-change-me}
+      MCP_SERVICE_SECRET: ${MCP_SERVICE_SECRET:-local-demo-mcp-change-me}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-}
+      CHAT_MODEL: ${CHAT_MODEL:-}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-BAAI/bge-m3}
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  postgres-data:
